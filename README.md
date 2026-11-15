@@ -52,7 +52,7 @@ vendor's documented API and needs a first real run: please report what you find.
 | **AutoCAD** (+ Civil 3D, Plant 3D, Map 3D, MEP) | COM automation, nothing to install | Python | **Tested** (AutoCAD 2024) |
 | BricsCAD, ZWCAD, GstarCAD, nanoCAD | COM automation (AutoCAD-compatible) | Python | Untested |
 | **Revit** | pyRevit extension (Routes) | Python (Revit API) | **Tested** (Revit 2026) |
-| **Archicad** | JSON API + Tapir add-on | Python + `ac` helper | Untested |
+| **Archicad** | JSON API + Tapir add-on | Python + `ac` helper | **Tested** (Archicad 29) |
 | **Navisworks** Manage / Simulate | COM automation (legacy API) | Python | Experimental |
 | **Rhino** 7 / 8 / 9 + Grasshopper | in-app Python bridge | Python | Untested |
 | **3ds Max** 2021+ | in-app pymxs bridge | Python + MAXScript | Untested |

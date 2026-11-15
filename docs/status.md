@@ -13,6 +13,7 @@ Python SDK 2.3.
 | **AutoCAD 2024** | Attached to the running app; created a layer, a closed polyline, a circle, text and an arc; read them back (area 24.0 m² for a 6 x 4 m room); ran a command line; got a clear error for a bad call; captured the window. |
 | **SOLIDWORKS 2025** (French install) | Attached; created a part; found a reference plane by type; sketched a 100 x 50 mm rectangle; extruded 20 mm; mass properties returned exactly 100 cm³; captured the window. |
 | **Revit 2026** (French install, pyRevit Routes) | Extension registered with pyRevit; created and opened a new project; in one transaction created 76 levels, 76 floors and 602 walls (a 300 m tower, each floor turned 1.2 degrees, from an outline read back from AutoCAD); opened the 3D view; captured the window. |
+| **Archicad 29** (with Tapir) | Read project info, stories and element counts; created 20 slabs (each turned 1.2 degrees, 4 m apart) and 8 columns through Tapir; counted them back; captured the window. |
 | **Unreal Engine 5.8** | Found the open editor by remote execution; spawned 151 actors (76 slabs and 75 floor volumes, each turned 1.2 degrees) in one editor transaction; moved the viewport camera; captured the window. |
 | Window capture | AutoCAD, SOLIDWORKS, Revit and Unreal windows captured and scaled to PNG. |
 | Installer | `install rhino` wrote its files and printed the startup line; `install blender` reported cleanly that Blender is not on the test PC. |
@@ -24,8 +25,6 @@ run them in the application yet. Expect small fixes on first contact.
 
 - In-app bridges: Blender, Rhino, 3ds Max, SketchUp, FreeCAD, Fusion, Maya, Cinema 4D,
   Houdini, QGIS. Blender, Rhino, 3ds Max and SketchUp are not installed on the test PC.
-- Archicad (JSON API + Tapir): installed
-  on the test PC, but it needs a project open.
 - COM apps other than AutoCAD and SOLIDWORKS: BricsCAD, ZWCAD, GstarCAD, nanoCAD,
   Inventor, CATIA, Solid Edge, MicroStation, ETABS, SAP2000, Robot.
 - Tekla Structures (pythonnet).
@@ -52,3 +51,6 @@ run them in the application yet. Expect small fixes on first contact.
   until Revit was restarted. Not yet understood.
 - `cad_apps` reports AutoCAD as running while it is still loading; scripts fail for the
   first seconds with "not running". Retry after the app has finished starting.
+- **Archicad, found on first contact:** creating elements on a story that is not the
+  one on screen makes Archicad show an "elements created on unseen Stories" dialog. The
+  elements are created, but every later command fails until the user clicks Continue.

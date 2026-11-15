@@ -63,6 +63,13 @@ wrong field: read it and correct.
   `ac.has_tapir()` is False, say so and point the user to the Tapir add-on.
 - Each command is its own undo step in Archicad; there is no way to group them.
 - Archicad must have a project open and no modal dialog showing.
+- Creating elements above or below the story on screen (a slab with `level` 12 while
+  the Ground Floor is shown) makes Archicad open an "elements created on unseen
+  Stories" dialog. The elements exist, but the call hangs and later commands fail with
+  "Invalid program status" until the user clicks Continue. Warn the user before
+  building on several stories, and ask them to tick "Don't show this dialog again".
+- Recipes run on Archicad 29: `CreateSlabs` takes `{"slabsData": [{"level": z,
+  "polygonCoordinates": [{"x": .., "y": ..}, ...]}]}`.
 - Several Archicad instances: `cad_apps` cannot tell them apart yet; pass
   `instance=<port>` (19723, 19724, ...).
 - Archicad 30 has Graphisoft's own MCP server on paid plans; this bridge works from
