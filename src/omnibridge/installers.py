@@ -82,6 +82,8 @@ def _blender() -> list[str]:
         _copy(_source(*CORE), target / "omnibridge_core.py")
         out.append(f"[blender] installed in {target}")
     out.append("[blender] now enable it: Edit > Preferences > Add-ons > search 'OmniBridge' > tick.")
+    out.append("[blender] or from a terminal: blender -b --python-expr \"import bpy; "
+               "bpy.ops.preferences.addon_enable(module='omnibridge'); bpy.ops.wm.save_userpref()\"")
     return out
 
 

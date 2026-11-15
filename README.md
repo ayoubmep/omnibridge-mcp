@@ -57,7 +57,7 @@ vendor's documented API and needs a first real run: please report what you find.
 | **Rhino** 7 / 8 / 9 + Grasshopper | in-app Python bridge | Python | Untested |
 | **3ds Max** 2021+ | in-app pymxs bridge | Python + MAXScript | Untested |
 | **SketchUp** 2021+ | in-app Ruby bridge | Ruby | Untested |
-| **Blender** 3.2+ | add-on | Python (bpy) | Untested |
+| **Blender** 3.2+ | add-on | Python (bpy) | **Tested** (Blender 5.2) |
 | FreeCAD 0.21+ | Mod folder bridge | Python | Untested |
 | Autodesk Fusion | add-in | Python (adsk) | Untested |
 | **SOLIDWORKS** | COM automation, nothing to install | Python | **Tested** (SOLIDWORKS 2025) |
